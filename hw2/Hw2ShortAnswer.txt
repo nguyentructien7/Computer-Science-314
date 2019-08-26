@@ -1,0 +1,56 @@
+vProblem 3:
+There 8 processes end up calling exit.
+Double original by falling fork()
+0+1= 1
+0+1= 1
+Double the previous by falling fork()
+1+1= 2
+1+1= 2
+1+1= 2
+1+1= 2
+Double the previous by falling fork()
+1+2= 3
+1+2= 3
+1+2= 3
+1+2= 3
+1+2= 3
+1+2= 3
+1+2= 3
+1+2= 3
+
+This is one possible output for the program.
+1
+1
+2
+3
+2
+2
+3
+2
+3
+3
+3
+3
+3
+3
+Since all of them are separate it runs in different speed so the output is not in order.
+
+
+
+Problem 4:
+
+The output is not correct. It makes too many numbers. They all share &I. They are acting on the same variable so one is print while the other updating. The solution for this problem is to use semaphore. I would lock it until it done then release so the next one can continue. This will grantee that it won't mistaken it's working at twice.
+
+Original:
+real	0m0.476s
+user	0m0.151s
+sys	0m0.385s
+
+Fixed:
+real	0m0.513s
+user	0m0.149s
+sys	0m0.401s
+
+The execution time for the original is faster. It's different because the fix one has to wait until the other is done. The result changed my expectation because I thought it would be faster using thread but since it has to wait it end up to go slower because of the wait time.
+
+
