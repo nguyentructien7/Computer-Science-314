@@ -1,0 +1,5 @@
+Shayla Townsend
+Tien Nguyen
+Project 3 Scheduler
+
+For this project, round robin is implemented in DLXOS and is given. When this scheduler runs, the real time elapsed is around 20.2 seconds. After successfully implementing a multilevel feedback queue scheduler, the real time elapsed that was recorded was around 19.5 seconds which is relatively comparable to the time elapsed for the round robin scheduler. 
