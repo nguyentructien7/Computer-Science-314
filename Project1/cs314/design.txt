@@ -1,0 +1,2 @@
+When the fuction in userprog is called, it searches for the corsponding  symbol in trap.s. It then get handle by interupt handler which searches for the coresponding case. The getpid itseft works by comparing current PCB pointer to the size of the PCBS.PCBS is an array made external my process.h
+
